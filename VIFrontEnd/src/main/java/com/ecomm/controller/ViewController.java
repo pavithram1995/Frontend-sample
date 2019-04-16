@@ -1,7 +1,9 @@
 package com.ecomm.controller;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+
 
 
 @Controller
@@ -14,8 +16,9 @@ public String loginPage()
 	return "login";
 }
 @RequestMapping(value="/register")
-public String registerPage()
+public String method(Model m)
 {
-	return "register";
+	m.addAttribute("name", "hello pavi");
+	return "RegForm";
 }
 }
